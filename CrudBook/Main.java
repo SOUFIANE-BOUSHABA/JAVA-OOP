@@ -25,10 +25,9 @@ public class Main {
       
         library.deleteBook(1);
 
+
+
        
-        System.out.println("\nBooks after deletion:");
-        for (Book book : library.getAllBooks()) {
-            System.out.println("ID: " + book.getId() + ", Title: " + book.getTitle() + ", Author: " + book.getAuthor());
-        }
+       
     }
 }
