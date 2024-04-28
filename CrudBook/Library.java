@@ -27,6 +27,19 @@ class Library {
     public void deleteBook(int id) {
         books.removeIf(book -> book.getId() == id);
     }
+//oihio
 
-   
+    public Book getBookById(int id) {
+        for (Book book : books) {
+            if (book.getId() == id) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public List<Book> getAllBooks() {
+        return new ArrayList<>(books);
+    }
+
 }
