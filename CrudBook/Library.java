@@ -12,14 +12,7 @@ class Library {
     }
 
 
-    public void removeBook(int id) {
-        for (Book book : books) {
-            if (book.getId() == id) {
-                books.remove(book);
-                break;
-            }
-        }
-    }
+ 
     public void updateBook(int id, String title, String author) {
         for (Book book : books) {
             if (book.getId() == id) {
@@ -31,5 +24,9 @@ class Library {
         }
     }
 
+    public void deleteBook(int id) {
+        books.removeIf(book -> book.getId() == id);
+    }
 
+   
 }
